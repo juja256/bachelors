@@ -1,0 +1,28 @@
+%%% У даному файлі визначайте всі необхідні вам нові команди TeX
+%%% або перевизначення існуючих, наприклад...
+
+% Перевизначення символу порожньої множини, прийняте у нас
+\let\emptyset\varnothing
+
+% Визначення нових математичних команд
+\newcommand*{\xor}{\ensuremath \oplus}                              % \xor = (+)
+\newcommand*{\F}[1]{\ensuremath \mathbb F_{#1}}                    % F_n
+\newcommand*{\GF}[1]{\ensuremath \mathbb {GF}({#1})}                    % F_n
+\newcommand*{\Fgroup}[1]{\ensuremath \mathbb F^{*}_{#1}}           % F^*_n
+
+% Інший спосіб визначення математичного оператору
+\DeclareMathOperator{\ord}{ord}
+
+%определение команды для переноса знаков операции при разрыве строки
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{} {\hbox{$\mathsurround=0pt #1$}}{}}
+%использовать как: $a \hm+ b \hm+ c$; при переносе на новую строку знак будет продублирован
+
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+\captionsetup{font=footnotesize}
+
+\SetAlCapNameFnt{\Large}
+\SetAlCapFnt{\Large}
+\SetAlFnt{\Large}
+\SetAlgoCaptionSeparator{.}
