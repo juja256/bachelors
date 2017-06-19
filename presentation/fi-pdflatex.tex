@@ -1,0 +1,209 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% I, the copyright holder of this work, release this work into the
+%% public domain. This applies worldwide. In some countries this may
+%% not be legally possible; if so: I grant anyone the right to use
+%% this work for any purpose, without any conditions, unless such
+%% conditions are required by law.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+\usetheme[faculty=fi]{fibeamer}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[
+  main=ukrainian, %% By using `czech` or `slovak` as the main locale
+                %% instead of `english`, you can typeset the
+                %% presentation in either Czech or Slovak,
+                %% respectively.
+  english, russian %% The additional keys allow foreign texts to be
+]{babel}        %% typeset as follows:
+%%
+%%   \begin{otherlanguage}{czech}   ... \end{otherlanguage}
+%%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
+%%
+%% These macros specify information about the presentation
+\title{Розробка моделей відкритого тексту на основі стохастичних контекстно-вільних граматик в нормальній формі Грейбах} %% that will be typeset on the
+%\subtitle{Presentation Subtitle}
+\subtitle{Грубіян Євген Олекснадрович}
+
+\author{Керівник: к.ф.-м.н. Фесенко Андрій В'ячеславович}
+
+%% These additional packages are used within the document:
+\usepackage{ragged2e}  % `\justifying` text
+\usepackage{booktabs}  % Tables
+\usepackage{tabularx}
+\usepackage{tikz}      % Diagrams
+\usetikzlibrary{calc, shapes, backgrounds}
+\usepackage{amsmath, amssymb}
+\usepackage{url}       % `\url`s
+\usepackage{listings}  % Code listings
+\frenchspacing
+\begin{document}
+  \frame{\maketitle}
+
+
+
+  \begin{darkframes}
+    \section{Dark Frames}
+    \subsection{Вступ}
+    \begin{frame}{Актуальність}
+      Мови та граматики моделюють складні внутрішні структури багатьох об'єктів із різних галузей науки.
+      \begin{itemize}
+        \item Створення точних математичних моделей мови - одна із найважливіших задач штучного інтелекту.
+        \item В криптоаналізі важливою є модель відкритого тексту, вона дає криптоаналітику додаткову інформацію для зламу.
+        \item Структури послідовностей нуклеотидів в ДНК та РНК утворюються за граматичними правилами, що породжують певну мову.
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{...Актуальність}
+      \framesubtitle{Jabberwocky, Льюїс Керрол}%
+      \begin{tikzpicture}[overlay,remember picture]
+        \node[anchor=south east,xshift=-30pt,yshift=35pt]
+          at (current page.south east) {
+            \includegraphics[width=35mm]{resources/jabberwocky-dark}
+          };
+      \end{tikzpicture}%
+      'Twas brillig, and the slithy toves\\
+      Did gyre and gimble in the wabe;\\
+      All mimsy were the borogoves,\\
+      And the mome raths outgrabe.\\\bigskip
+
+      “Beware the Jabberwock, my son!\\
+      The jaws that bite, the claws that catch!\\
+      Beware the Jubjub bird, and shun\\
+      The frumious Bandersnatch!”\\
+    \end{frame}
+
+    \begin{frame}[label=lists]{Мета, об'єкт та предмет дослідження}
+      \begin{exampleblock}{Мета}
+      Побудова нової моделi природних мов, що дасть змогу краще використовувати структуру мов для методiв криптоаналiзу
+      \end{exampleblock}
+      \begin{block}{Об'єкт}
+        Формальна модель природних мов
+      \end{block}
+      \begin{block}{Предмет}
+        Побудова полiпшеної моделi природної мови на основi стохастичної контекстно-вiльної граматики в нормальнiй формi Грейбах
+      \end{block}
+
+    \end{frame}
+
+    \begin{frame}{Завдання}
+      \begin{enumerate}
+      \item провести огляд опублікованих робіт за тематикою дослідження;
+      \item розробити модель стохастичних регулярних граматик на основі прихованих моделей Маркова;
+      \item побудувати модель стохастичних контекстно-вільних граматик на основі узагальнення прихованих моделей Маркова та дослідити властивості цієї моделі;
+      \item розробити програмну реалізацію моделей;
+      \item перевірити узгодженість моделей емпіричним шляхом.
+      \end{enumerate}
+    \end{frame}
+    \subsection{Результати}
+    \begin{frame}{Модель стохастичної регулярної граматики}
+      \begin{block}{Теорема}
+        Для кожної стохастичної регулярної граматики iснує прихована модель Маркова другого порядку за спостереженнями, що допускає таку саму стохастичну мову.
+      \end{block}
+      \begin{block}{Твердження}
+        Алгоритм перетворення стохастичної регулярної граматики до прихованої моделi Маркова другого порядку за спостереженнями має складнiсть $\mathcal{O}(l)$, де $l$ - кiлькiсть правил виводу в
+        граматицi.
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Модель стохастичної КВ граматики}
+      \begin{exampleblock}{Визначення}
+        \textit{Прихованою моделлю Маркова другого порядку за спостереженнями зі стеком} з простором латентних(прихованих) станів $E = \{ 1,\dots,n \}$, простором спостережень $O = \{ 1,\dots,m \}$ та стеком  називається стохастичний процес $ \{ (X_t, S_t, Y_t),\ t \in \mathbb{N} \},\ \ X_t \in E,\ Y_t \in O $, $S_t$ - стек над множиною $E$, переходи в якому здійснюються за алгоритмом:
+        \begin{itemize}
+          \item Ініціалізація стеку: $S_1 = \emptyset,\ S_t = S_{t-1}$
+
+        \end{itemize}
+      \end{exampleblock}
+    \end{frame}
+
+    \begin{frame}{Модель стохастичної КВ граматики}
+      \begin{itemize}
+        \item Перехід між латентними станами:
+        \begin{multline}
+          P(X_t = i,\ S_t.Push(k) | X_{1:t-1}) = \\
+          P(X_t = i,\ S_t.Push(k) | X_{t-1}),\\
+          P(X_t = i,\ S_t.Push(k) | X_{t-1} = j) = p_{jik}
+        \end{multline}
+        \item Спостереження:
+        \begin{multline}
+          P(Y_t = i | X_{1:t}, S_t.Top ) = P(Y_t = i | X_t, X_{t-1}, S_t.Top),\\
+          P(Y_t = i | X_t = j, X_{t-1} = k, S_t.Top = l) = q_{lkji}
+        \end{multline}
+        \item Якщо $X_t = \epsilon$ та $ S_t.Top \neq \epsilon $, то $ X_t := S_t.Top,\ S_t.Pop $. Якщо $X_t = \epsilon$ та $ S_t.Top = \epsilon $, то ланцюг завершується.
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Модель стохастичної КВ граматики}
+      \begin{block}{Теорема}
+        Для кожної стохастичної контекстно-вільної граматики існує прихована модель Маркова другого порядку за спостереженнями зі стеком, що допускає таку саму стохастичну мову.
+      \end{block}
+      \begin{block}{Твердження}
+      Алгоритм перетворення стохастичної граматики в 2-нормальній формі Грейбах до прихованої моделі Маркова другого порядку за спостереженнями зі стеком має складність $\mathcal{O}(l)$, де $l$ - кількість правил виводу в граматиці.
+      \end{block}
+
+    \end{frame}
+
+    \begin{frame}{Узгодженість моделей}
+      Було перевірено емпіричним шляхом узгодженість запропонованої моделі і стохастичних КВ граматик за допомогою розробленого програмного пакету: \url{https://github.com/juja256/hmm2s}
+      \begin{alertblock}{Тестова граматика}
+        \begin{columns}[onlytextwidth]
+          \column{.5\textwidth}
+          \begin{align*}
+            (0.2) A_1 \rightarrow a A_3 A_2 \\
+            (0.8) A_1 \rightarrow c A_2 \\
+            (0.5) A_2 \rightarrow a \\
+            (0.5) A_2 \rightarrow b
+          \end{align*}
+          \column{.5\textwidth}
+          \begin{align*}
+            (0.3) A_3 \rightarrow d A_2 \\
+            (0.3) A_3 \rightarrow c A_2 \\
+            (0.4) A_3 \rightarrow a
+          \end{align*}
+        \end{columns}
+
+      \end{alertblock}
+    \end{frame}
+
+    \begin{frame}{Узгодженість моделей}
+      %\framesubtitle{Частотні таблиці}%
+      \begin{table}[!b]
+        {\carlitoTLF % Use monospaced lining figures
+        \begin{tabularx}{\textwidth}{Xcc}
+          \textbf{Слово} & \textbf{Частота / SCFG} & \textbf{Частота / HMM2S} \\
+          \toprule
+          a a a & 5 & 1 \\
+          a a b & 1 & 2 \\
+          a c a a & 1 & 1 \\
+          a c a b & 3 & 0 \\
+          a c b a & 2 & 0 \\
+          a c b b & 3 & 2 \\
+          a d a a & 0 & 2 \\
+          a d a b & 0 & 2 \\
+          a d b a & 1 & 1 \\
+          a d b b & 1 & 3 \\
+          c a & 45 & 45 \\
+          c b & 38 & 41
+          %\bottomrule
+        \end{tabularx}}
+
+      \end{table}
+
+    \end{frame}
+
+  \end{darkframes}
+
+
+  \section{Light Frames}
+    \subsection{Висновки}
+    \begin{frame}{Висновки}
+      \begin{itemize}
+        \item Розроблено нову модель природної мови на основі запропонованої прихованої моделі Маркова другого порядку за спостереженнями зі стеком.
+        \item Доведено еквівалентність запропонованої моделі та стохастичних КВ граматик.
+        \item Запропоновано поліноміальний алгоритм зведення стохастичної КВ граматики до запропонованої моделі.
+        \item Емпірично підтверджено узгодженість моделі і стохастичної КВ граматики.
+      \end{itemize}
+    \end{frame}
+
+\end{document}
