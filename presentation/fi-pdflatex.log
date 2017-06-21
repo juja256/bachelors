@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.17)  20 JUN 2017 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.17)  22 JUN 2017 00:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1839,7 +1839,7 @@ LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
 (Font)              scaled to size 9.30756pt on input line 55.
  [2
 
-] <resources/jabberwocky-dark.pdf, id=67, 1085.40271pt x 1638.0863pt>
+] <resources/jabberwocky-dark.pdf, id=74, 1085.40271pt x 1638.0863pt>
 File: resources/jabberwocky-dark.pdf Graphic file (type pdf)
  <use resources/jabberwocky-dark.pdf>
 Package pdftex.def Info: resources/jabberwocky-dark.pdf used on input line 74.
@@ -1858,32 +1858,32 @@ Package pdftex.def Info: resources/jabberwocky-dark.pdf used on input line 74.
 
 ] [9
 
+] [10
+
 ]
-LaTeX Font Info:    Try loading font information for T2A+DejaVuSansMono-TLF on input line 166.
+LaTeX Font Info:    Try loading font information for T2A+DejaVuSansMono-TLF on input line 181.
  (/usr/share/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
 File: T2ADejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T2A/DejaVuSansMono-TLF.
 )
 LaTeX Font Info:    Font shape `T2A/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 166.
+(Font)              scaled to size 9.30756pt on input line 181.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `DejaVuSansMono-TLF' (encoding: T2A).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [10
+ [11
 
 ]
-LaTeX Font Info:    Try loading font information for T2A+Carlito-TLF on input line 192.
-LaTeX Font Info:    No file T2ACarlito-TLF.fd. on input line 192.
+LaTeX Font Info:    Try loading font information for T2A+Carlito-TLF on input line 208.
+LaTeX Font Info:    No file T2ACarlito-TLF.fd. on input line 208.
 
 
 LaTeX Font Warning: Font shape `T2A/Carlito-TLF/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 192.
+(Font)              using `T2A/cmr/m/n' instead on input line 208.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-) [11
-
-] [12
+) [12
 
 ] [13
 
@@ -1897,8 +1897,8 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 \tf@snm=\write8
 \openout8 = `fi-pdflatex.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (/media/juja/FEEE-2743/bachelors/presentation/fi-pdflatex.aux
 LaTeX Font Info:    Try loading font information for T1+Carlito-LF on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/carlito/T1Carlito-LF.fd
@@ -1911,10 +1911,10 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `fi-pdflatex.out' has not changed.
-(rerunfilecheck)             Checksum: 6897093F148BD27BD21AEE05D907D6BB;455.
+(rerunfilecheck)             Checksum: 821D47FF3B82EB848E8724587E4D85C5;455.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1923,22 +1923,22 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 31196 strings out of 493029
- 590085 string characters out of 6136234
- 701186 words of memory out of 5000000
- 33896 multiletter control sequences out of 15000+600000
- 35523 words of font info for 76 fonts, out of 8000000 for 9000
+ 31161 strings out of 493029
+ 589124 string characters out of 6136234
+ 701187 words of memory out of 5000000
+ 33867 multiletter control sequences out of 15000+600000
+ 34596 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,16n,76p,963b,1194s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevot1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevoml.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/arev/ArevSans-Oblique.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/arev/ArevSans-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on /media/juja/FEEE-2743/bachelors/presentation/fi-pdflatex.pdf (13 pages, 2307960 bytes).
+ 70i,16n,76p,963b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevot1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevoml.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/arev/ArevSans-Oblique.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/arev/ArevSans-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb>
+Output written on /media/juja/FEEE-2743/bachelors/presentation/fi-pdflatex.pdf (13 pages, 2318301 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 203 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
  34 named destinations out of 1000 (max. 500000)
- 17537 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 15489 words of extra memory for PDF output out of 17280 (max. 10000000)
 
