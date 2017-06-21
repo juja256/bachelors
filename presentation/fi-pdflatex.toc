@@ -1,6 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
 \select@language {ukrainian}
 \beamer@sectionintoc {1}{Dark Frames}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{\IeC {\CYRV }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrp }}{2}{0}{1}
 \beamer@subsectionintoc {1}{2}{\IeC {\CYRR }\IeC {\cyre }\IeC {\cyrz }\IeC {\cyru }\IeC {\cyrl }\IeC {\cyrsftsn }\IeC {\cyrt }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyri }}{6}{0}{1}
-\beamer@sectionintoc {2}{Light Frames}{12}{0}{2}
-\beamer@subsectionintoc {2}{1}{\IeC {\CYRV }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrk }\IeC {\cyri }}{12}{0}{2}
+\beamer@sectionintoc {2}{Light Frames}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{\IeC {\CYRV }\IeC {\cyri }\IeC {\cyrs }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrk }\IeC {\cyri }}{13}{0}{2}
