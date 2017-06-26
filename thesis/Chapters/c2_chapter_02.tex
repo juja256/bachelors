@@ -142,9 +142,9 @@ $$ A \rightarrow a A_1 A_2 $$
     \item Введемо приховану модель Маркова другого порядку за спостереженнями зі стеком $ \{ (X_t, Y_t, S_t) \} $ з параметрами $\lambda = \big\langle T, Q, \pi \big\rangle$ з простором латентних станів $N \cup \{ \epsilon \}$ та простором спостережень $\Sigma$.
     \item Початковий розподіл $\pi$ задамо у вигляді: $ \pi \colon P(X_1 = S) = 1 $, тобто модель стартує з початкового нетерміналу граматики.
     \item Ініціалізуємо тензор переходів $T$ наступним чином:
-    $$ p_{BAC} = \sum_{a \in \Sigma} P(A \rightarrow a B C) \ \forall A \in N,\ B, C \in N \cup \{ \epsilon \} $$
+    $$ p_{ABC} = \sum_{a \in \Sigma} P(A \rightarrow a B C) \ \forall A \in N,\ B, C \in N \cup \{ \epsilon \} $$
     \item Ініціалізуємо тензор спостережень $Q$ наступним чином:
-    $$ q_{CBAa} = \frac{P(A \rightarrow a B C)}{p_{BAC}} $$
+    $$ q_{CABa} = \frac{P(A \rightarrow a B C)}{p_{ABC}} $$
   \end{itemize}
   Таким чином, перехід моделі від стану $(X_t, Y_t, S_t)$ до стану $(X_{t+1}, Y_{t+1}, S_{t+1})$ буде описувати один крок граматичного виводу. Термінація моделі буде здійснена при одночасному досяганні $ X_t = \epsilon$ і $S_t = \emptyset $.
 \end{proof}
